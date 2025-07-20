@@ -20,7 +20,7 @@ images/
 .idea/
 
 # TensorFlow and Keras model files
-*.h5
+.h5
 *.hdf5
 *.pb
 *.ckpt
