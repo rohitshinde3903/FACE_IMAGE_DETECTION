@@ -3,7 +3,7 @@ services:
     name: facial-emotion-app
     env: python
     buildCommand: ""
-    startCommand: gunicorn app:app
+    startCommand: gunicorn app:app --timeout 300 --bind 0.0.0.0:8080
     plan: free
     runtime: python
     pythonVersion: 3.10.13
