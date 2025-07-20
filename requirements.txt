@@ -8,5 +8,6 @@ tqdm==4.66.1
 opencv-contrib-python==4.7.0.72
 scikit-learn==1.2.2
 flask==2.2.5
-waitress==2.1.2
 flask-cors==3.0.10
+gunicorn==20.1.0
+
