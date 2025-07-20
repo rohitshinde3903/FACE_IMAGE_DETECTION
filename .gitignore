@@ -1,0 +1,59 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+.python-version
+images/
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VSCode settings
+.vscode/
+
+# PyCharm settings
+.idea/
+
+# TensorFlow and Keras model files
+*.h5
+*.hdf5
+*.pb
+*.ckpt
+checkpoint
+saved_model/
+
+# Logs and debugging
+*.log
+logs/
+*.tensorboard/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Data & uploads (optional: add specific filenames or folders)
+*.csv
+*.dat
+*.npz
+*.npy
+
+# Environment files
+.env
+.env.*
+
+# Build files
+*.egg-info/
+dist/
+build/
+
+# Pip dependency files
+pip-wheel-metadata/
+
+# Temporary files
+*.tmp
+*.bak
