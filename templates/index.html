@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Facial Emotion Detector</title>
+</head>
+<body>
+    <h1>Choose Detection Mode</h1>
+
+    <h2>🔴 Real-Time Webcam</h2>
+    <a href="/video_feed">Start Webcam Detection</a>
+    <br><br>
+    <img src="/video_feed" width="600">
+
+    <hr>
+
+    <h2>📷 Upload an Image</h2>
+    <form method="POST" action="/upload" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Upload and Detect</button>
+    </form>
+</body>
+</html>

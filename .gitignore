@@ -57,3 +57,15 @@ pip-wheel-metadata/
 # Temporary files
 *.tmp
 *.bak
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.h5
+*.json
+.env
+venv/
+*.sqlite3
+instance/
+.DS_Store
+*.log

@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: facial-emotion-app
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    plan: free
+    runtime: python
+    pythonVersion: 3.10.13
