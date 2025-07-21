@@ -1,7 +1,5 @@
 import PIL
 from flask import Flask, render_template, Response, request
-import numpy as np
-from PIL import Image
 
 
 app = Flask(__name__)
