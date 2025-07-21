@@ -1,18 +1,18 @@
-import PIL
-from flask import Flask, render_template, Response, request
+import io
+import PIL.Image
+from flask import Flask, redirect, request, Response
 
+import google.generativeai as genai
+
+# Configure Gemini API key
+genai.configure(api_key="AIzaSyBJqnwsEDyhXkD73L04O7wxYHIxfCJLETU")
 
 app = Flask(__name__)
 
-
 @app.route('/')
 def index():
-    return render_template('index.html')
-
-import google.generativeai as genai
-genai.configure(api_key="AIzaSyBJqnwsEDyhXkD73L04O7wxYHIxfCJLETU")
-import PIL.Image
-import io
+    # Redirect to your frontend (Next.js)
+    return redirect("http://localhost:3000/tools/genderage")
 
 @app.route('/gemini_upload', methods=['POST'])
 def gemini_upload():
@@ -42,20 +42,11 @@ def gemini_upload():
         )
 
         response = model.generate_content([prompt, img])
-        result = response.text
-
-        # Return the raw text directly, not render a template
-        return result, 200 # Return text with a 200 OK status
+        return response.text, 200
 
     except Exception as e:
-        # Log the error for debugging
         print(f"Gemini processing failed: {e}")
         return f"Gemini processing failed: {e}", 500
 
 if __name__ == "__main__":
-    app.run(debug=True) # Run in debug mode for easier development
-
-
-
-if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
