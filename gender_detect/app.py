@@ -19,7 +19,7 @@ def index():
     This ensures that if someone accesses the Flask server directly, they are
     sent to the main user interface.
     """
-    return redirect("http://localhost:3000/tools/genderage")
+    return redirect("https://stonesweb.in/tools/genderage")
 
 @app.route('/gemini_upload', methods=['POST'])
 def gemini_upload():
